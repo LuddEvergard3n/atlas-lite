@@ -1,0 +1,337 @@
+/* ================================================
+   ATLAS Modal System - Professional Styles
+   ================================================ */
+
+/* Modal Root Container */
+#atlasModalRoot {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    pointer-events: none;
+}
+
+#atlasModalRoot:empty {
+    display: none;
+}
+
+/* Backdrop */
+.atlas-modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(0px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    pointer-events: all;
+    transition: all 0.2s ease;
+}
+
+.atlas-modal-backdrop.active {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+}
+
+.atlas-modal-backdrop.closing {
+    background: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(0px);
+}
+
+/* Modal Box */
+.atlas-modal {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.75rem;
+    max-width: 440px;
+    width: 100%;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    transform: scale(0.95) translateY(10px);
+    opacity: 0;
+    transition: all 0.2s ease;
+    text-align: center;
+}
+
+.atlas-modal-backdrop.active .atlas-modal {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+}
+
+.atlas-modal-backdrop.closing .atlas-modal {
+    transform: scale(0.9) translateY(20px);
+    opacity: 0;
+}
+
+/* Modal Sizes */
+.atlas-modal.atlas-modal-small {
+    max-width: 340px;
+    padding: 1.5rem;
+}
+
+.atlas-modal.atlas-modal-medium {
+    max-width: 520px;
+}
+
+.atlas-modal.atlas-modal-large {
+    max-width: 680px;
+    padding: 2.5rem;
+}
+
+.atlas-modal.atlas-modal-xlarge {
+    max-width: 900px;
+    max-height: 85vh;
+    overflow-y: auto;
+}
+
+/* Icon Container */
+.atlas-modal-icon {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 1.25rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.atlas-modal-icon svg {
+    width: 28px;
+    height: 28px;
+}
+
+/* Icon Types */
+.atlas-modal-icon-success {
+    background: rgba(90, 154, 124, 0.15);
+    color: var(--success);
+}
+
+.atlas-modal-icon-error {
+    background: rgba(196, 107, 107, 0.15);
+    color: var(--danger);
+}
+
+.atlas-modal-icon-warning {
+    background: rgba(196, 162, 77, 0.15);
+    color: var(--warning);
+}
+
+.atlas-modal-icon-info {
+    background: rgba(107, 158, 190, 0.15);
+    color: var(--accent);
+}
+
+.atlas-modal-icon-confirm {
+    background: rgba(139, 157, 199, 0.15);
+    color: var(--accent-secondary);
+}
+
+.atlas-modal-icon-delete {
+    background: rgba(196, 107, 107, 0.15);
+    color: var(--danger);
+}
+
+.atlas-modal-icon-form {
+    background: rgba(107, 158, 190, 0.15);
+    color: var(--accent);
+}
+
+/* Content */
+.atlas-modal-content {
+    margin-bottom: 1.5rem;
+}
+
+.atlas-modal-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+}
+
+.atlas-modal-body {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.atlas-modal-body strong {
+    color: var(--text);
+}
+
+.atlas-modal-body p {
+    margin-bottom: 0.5rem;
+}
+
+.atlas-modal-body p:last-child {
+    margin-bottom: 0;
+}
+
+/* Actions */
+.atlas-modal-actions {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+}
+
+.atlas-modal-actions .btn {
+    min-width: 110px;
+    padding: 0.6rem 1.25rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border-radius: var(--radius);
+}
+
+.atlas-modal-actions .btn-primary {
+    background: var(--accent);
+    color: #fff;
+    border: none;
+}
+
+.atlas-modal-actions .btn-primary:hover {
+    filter: brightness(1.1);
+}
+
+.atlas-modal-actions .btn-secondary {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-secondary);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.atlas-modal-actions .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.atlas-modal-actions .btn-danger {
+    background: var(--danger);
+    color: #fff;
+    border: none;
+    box-shadow: none;
+}
+
+.atlas-modal-actions .btn-danger:hover {
+    transform: translateY(-2px);
+    box-shadow: none;
+}
+
+/* Form inside modal */
+.atlas-modal .modal-form {
+    text-align: left;
+    margin-top: 0.5rem;
+}
+
+.atlas-modal .modal-form .form-group {
+    margin-bottom: 1rem;
+}
+
+.atlas-modal .modal-form .form-group:last-child {
+    margin-bottom: 0;
+}
+
+.atlas-modal .modal-form .form-label {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.4rem;
+    font-weight: 500;
+}
+
+.atlas-modal .modal-form .form-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: #fff;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+
+.atlas-modal .modal-form .form-input:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
+}
+
+.atlas-modal .modal-form .form-input::placeholder {
+    color: #4b5563;
+}
+
+/* Large modal with scrollable content */
+.atlas-modal.atlas-modal-large .atlas-modal-body,
+.atlas-modal.atlas-modal-xlarge .atlas-modal-body {
+    text-align: left;
+    max-height: 50vh;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+}
+
+.atlas-modal.atlas-modal-xlarge .atlas-modal-body {
+    max-height: 60vh;
+}
+
+/* Custom scrollbar for modal */
+.atlas-modal-body::-webkit-scrollbar {
+    width: 6px;
+}
+
+.atlas-modal-body::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 3px;
+}
+
+.atlas-modal-body::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+}
+
+.atlas-modal-body::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Mobile Responsive */
+@media (max-width: 640px) {
+    .atlas-modal-backdrop {
+        padding: 0.75rem;
+        align-items: flex-end;
+    }
+    
+    .atlas-modal {
+        max-width: 100%;
+        border-radius: 20px 20px 0 0;
+        margin-bottom: 0;
+    }
+    
+    .atlas-modal-backdrop.active .atlas-modal {
+        transform: scale(1) translateY(0);
+    }
+    
+    .atlas-modal-backdrop.closing .atlas-modal {
+        transform: scale(1) translateY(100%);
+    }
+    
+    .atlas-modal-icon {
+        width: 56px;
+        height: 56px;
+    }
+    
+    .atlas-modal-icon svg {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .atlas-modal-actions {
+        flex-direction: column-reverse;
+    }
+    
+    .atlas-modal-actions .btn {
+        width: 100%;
+    }
+}

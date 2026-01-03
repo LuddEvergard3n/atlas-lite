@@ -1,0 +1,102 @@
+/* ================================================
+   ATLAS v2.1 - Theme Variables
+   ================================================ */
+
+:root {
+    /* Sidebar */
+    --sidebar-width: 220px;
+    
+    /* Transitions */
+    --transition: 200ms ease;
+    
+    /* Border Radius */
+    --radius: 8px;
+    
+    /* Typography */
+    --font-family: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Consolas', monospace;
+}
+
+/* ================================================
+   Dark Theme (Default)
+   ================================================ */
+
+[data-theme="dark"] {
+    /* Backgrounds - Deeper, more professional */
+    --bg: #0b0f14;
+    --bg-secondary: #12171e;
+    --bg-tertiary: #1a2029;
+    
+    /* Text */
+    --text: #e2e6eb;
+    --text-secondary: #8b939e;
+    --text-muted: #5c6370;
+    
+    /* Primary - Neutral slate gray */
+    --accent: #8a9ba8;
+    --accent-secondary: #9ca3af;
+    
+    /* Status Colors - Desaturated */
+    --success: #5a9a7c;
+    --warning: #c4a24d;
+    --danger: #c46b6b;
+    
+    /* Border */
+    --border: #252b35;
+}
+
+/* ================================================
+   Light Theme
+   ================================================ */
+
+[data-theme="light"] {
+    /* Backgrounds - Clean white */
+    --bg: #f5f6f8;
+    --bg-secondary: #ffffff;
+    --bg-tertiary: #ebedf0;
+    
+    /* Text */
+    --text: #1a1f26;
+    --text-secondary: #4a5160;
+    --text-muted: #7a8290;
+    
+    /* Primary - Professional blue */
+    --accent: #4a7a9e;
+    --accent-secondary: #5a6a9a;
+    
+    /* Status Colors - Muted */
+    --success: #4a8a6a;
+    --warning: #a48a3a;
+    --danger: #a45a5a;
+    
+    /* Border */
+    --border: #dde0e5;
+}
+
+/* ================================================
+   High Contrast Theme (Accessibility)
+   ================================================ */
+
+[data-theme="high-contrast"] {
+    /* Backgrounds */
+    --bg: #000000;
+    --bg-secondary: #0a0a0a;
+    --bg-tertiary: #1a1a1a;
+    
+    /* Text */
+    --text: #ffffff;
+    --text-secondary: #e0e0e0;
+    --text-muted: #a0a0a0;
+    
+    /* Accent Colors */
+    --accent: #00d4ff;
+    --accent-secondary: #a78bfa;
+    
+    /* Status Colors */
+    --success: #00ff88;
+    --warning: #ffcc00;
+    --danger: #ff4444;
+    
+    /* Border */
+    --border: #404040;
+}
