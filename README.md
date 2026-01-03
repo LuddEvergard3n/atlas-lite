@@ -19,7 +19,7 @@
 
 ## 🚀 Demo Online
 
-**[Ver Demo ao Vivo](https://seu-usuario.github.io/atlas/)**
+**[Ver Demo ao Vivo]https://luddevergard3n.github.io/atlas-lite/**
 
 ---
 
