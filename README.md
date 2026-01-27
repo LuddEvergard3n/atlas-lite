@@ -17,12 +17,6 @@
 
 ---
 
-## 🚀 Demo Online
-
-**[Ver Demo ao Vivo]https://luddevergard3n.github.io/atlas-lite/**
-
----
-
 ## Sobre
 
 Esta é uma versão de demonstração do **ATLAS Enterprise**, um sistema de gestão financeira pessoal e empresarial construído como Progressive Web Application (PWA).
