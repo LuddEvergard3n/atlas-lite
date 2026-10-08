@@ -1,108 +1,59 @@
-# ATLAS Lite - Demo Version
+# ATLAS Lite
 
-<p align="center">
-  <img src="assets/atlas-logo-full.png" alt="ATLAS" width="280">
-</p>
+![JavaScript](https://img.shields.io/badge/JavaScript-Vanilla-F7DF1E?logo=javascript&logoColor=111111)
+![WebAssembly](https://img.shields.io/badge/WebAssembly-C_Engine-654FF0?logo=webassembly&logoColor=white)
+![PWA](https://img.shields.io/badge/PWA-Ready-5A0FC8?logo=pwa&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Portfolio_Demo-2563EB)
 
-<p align="center">
-  <strong>Advanced Technical Laboratory for Analysis & Strategy</strong><br>
-  Demo Version for Portfolio
-</p>
+Local browser-based financial analysis and visualization demo focused on performance, transparent calculations, and user control.
 
-<p align="center">
-  <img src="https://img.shields.io/badge/version-5.0--demo-blue" alt="Version">
-  <img src="https://img.shields.io/badge/PWA-ready-green" alt="PWA">
-  <img src="https://img.shields.io/badge/WASM-enabled-purple" alt="WASM">
-</p>
+## Modules
 
----
+- Financial health dashboard.
+- Compound-interest simulator.
+- Financial independence calculator.
+- Investment comparison.
+- Monte Carlo and discounted cash-flow simulations.
+- What-if scenarios.
+- Strategic goals.
+- ATLAS financial health score.
 
-## Sobre
+## Technology
 
-Esta é uma versão de demonstração do **ATLAS Enterprise**, um sistema de gestão financeira pessoal e empresarial construído como Progressive Web Application (PWA).
+- Vanilla JavaScript with no framework.
+- C compiled to WebAssembly for numerical simulations.
+- Native Canvas 2D charts.
+- Progressive Web App assets.
+- Fully client-side execution without a backend.
 
-### Tecnologias
+The C source under `wasm/src/` covers Monte Carlo simulations, discounted cash flow, net present value, and internal rate of return calculations.
 
-- **100% Client-Side** — Sem servidor, executa no navegador
-- **Vanilla JavaScript** — Zero dependências
-- **WebAssembly** — Simulações Monte Carlo em C compilado
-- **Canvas 2D** — Gráficos nativos sem bibliotecas
-
----
-
-## Módulos Incluídos
-
-| Módulo | Descrição |
-|--------|-----------|
-| **Dashboard** | Visão geral da saúde financeira |
-| **Juros Compostos** | Simulador de investimentos |
-| **FIRE** | Calculadora de independência financeira |
-| **Comparador** | Análise comparativa de investimentos |
-| **Simulações** | Monte Carlo e DCF (WASM) |
-| **Cenários** | Simulações what-if |
-| **Metas** | Objetivos estratégicos |
-| **Índice Atlas** | Score de saúde financeira (0-100) |
-
----
-
-## WebAssembly
-
-O módulo de Simulações utiliza WebAssembly para cálculos de alta performance:
-
-- **Monte Carlo FIRE** — 10.000 simulações em ~50ms
-- **Monte Carlo Investment** — Análise probabilística
-- **DCF Valuation** — Fluxo de caixa descontado
-- **NPV/IRR** — Valor presente líquido e taxa interna de retorno
-
-O código fonte em C está disponível em `/wasm/src/`.
-
----
-
-## Executar Localmente
+## Run locally
 
 ```bash
-# Clone o repositório
-git clone https://github.com/seu-usuario/atlas.git
-cd atlas
-
-# Sirva com qualquer servidor HTTP
-npx serve .
-# ou
-python -m http.server 8000
-
-# Acesse http://localhost:8000
+python3 -m http.server 8000
 ```
 
----
+Open `http://localhost:8000`.
 
-## Limitações da Demo
+## Structure
 
-- **Sem persistência** — Dados resetam ao recarregar
-- **Dados de exemplo** — Pré-carregados para demonstração
-- **Módulos limitados** — 8 de 20 módulos do sistema completo
+```text
+index.html       Application shell
+css/             Layout and module presentation
+js/              Dashboard, calculators, charts, and orchestration
+wasm/src/        Auditable C calculation sources
+assets/          Local visual assets
+manifest.json    PWA metadata
+```
 
----
+## Demo limits
 
-## Versão Completa
+- Data resets when the page reloads.
+- Example data is included for demonstration.
+- Eight modules are exposed in this public demo.
+- This repository does not include a production financial service or advisory system.
 
-A versão completa do ATLAS Enterprise inclui:
+## License
 
-- 20+ módulos financeiros
-- Multi-workspace (Pessoal, Investidor, Holding, Empresa)
-- Persistência local (IndexedDB + localStorage)
-- Relatórios executivos em PDF
-- Stress test e análise de cenários
-- E muito mais...
-
----
-
-## Licença
-
-Demo Version — © 2026 ATLAS Enterprise
-
----
-
-<p align="center">
-  <strong>ATLAS Lite v5.0</strong><br>
-  <em>Demo for Portfolio</em>
-</p>
+Portfolio demonstration. See the repository license terms before reuse.
